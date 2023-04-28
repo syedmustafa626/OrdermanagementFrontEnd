@@ -1,0 +1,20 @@
+form{
+    width: 700px;
+    color: rgb(32, 31, 31);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control{
+    background:transparent;
+    background-color: transparent;
+    color:transparent
+}
+::placeholder{
+    color: rgb(26, 24, 24);
+}
