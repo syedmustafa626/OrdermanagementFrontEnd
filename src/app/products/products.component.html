@@ -1,1 +1,35 @@
-<p>products works!</p>
+<div class="container">
+    <div class="row g-0">
+      <div class="row g-0">
+        <div class="col text-center p-2 mb-3 rounded-3 bg-info">
+          <span class="fs-3">Products</span>
+        </div>
+      </div>
+      <div class="col">
+        <table class="table table-hover text-white">
+          <thead class="thead text-danger" style="font-weight: 1">
+            <tr>
+              <th>ProductId</th>
+              <th>Product Name</th>
+              <th>Category Id</th>
+              <th>ProductPrice</th>
+            </tr>
+          </thead>
+          <tbody class="thead text-black" style="font-weight: 1">
+            <tr *ngFor="let p of productsService.productsList">
+              <td>{{ p.ProductId }}</td> 
+              <td>{{ p.ProductName}}</td>
+              <td>{{ p.CategoryId}}</td>
+              <td>{{ p.ProductPrice}}</td>
+              <td>
+                <button type="button" class="btn btn-danger rounded-5" (click)="del(p.ProductId)">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

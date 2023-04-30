@@ -7,13 +7,12 @@ import { Injectable } from '@angular/core';
 export class AuthorizeService {
 
   readonly authUrl="http://localhost:55277/api/Auth/Login";
-  readonly authAdminUrl="http://localhost:14703/api/AdminRegisters/authenticate";
 
   constructor(private http:HttpClient) { }
 
-  logIn(loginObj:any){
-    console.log(loginObj);
-    return this.http.post<any>(this.authUrl,loginObj);
+  logIn(any){
+    console.log(any);
+    return this.http.post<any>(this.authUrl,any);
   }
 
   logOut(){

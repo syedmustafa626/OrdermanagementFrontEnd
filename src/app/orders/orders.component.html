@@ -1,1 +1,37 @@
-<p>orders works!</p>
+<div class="container">
+    <div class="row g-0">
+      <div class="row g-0">
+        <div class="col text-center p-2 mb-3 rounded-3 bg-info">
+          <span class="fs-3">Orders</span>
+        </div>
+      </div>
+      <div class="col">
+        <table class="table table-hover text-white">
+          <thead class="thead text-danger" style="font-weight: 1">
+            <tr>
+              <th>OrderId</th>
+              <th>UserId</th>
+              <th>OrderDate</th>
+              <th>Discount</th>
+              <th>FinalAmount</th>
+            </tr>
+          </thead>
+          <tbody class="thead text-black" style="font-weight: 1">
+            <tr *ngFor="let p of ordersService.ordersList">
+              <td>{{ p.OrderId }}</td> 
+              <td>{{ p.UserId}}</td>
+              <td>{{ p.OrderDate|date:'short'}}</td>
+              <td>{{ p.Discount}}</td>
+              <td>{{ p.FinalAmount}}</td>
+              <td>
+                <button type="button" class="btn btn-danger rounded-5" (click)="del(p.OrderId)">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

@@ -18,12 +18,7 @@
           <tr *ngFor="let p of categoryService.categoryList">
             <!-- <td>{{ p.CategoryId }}</td> -->
             <td>{{ p.CategoryName }}</td>
-            <td>{{ p.CategoryDescription }}</td>
-            <td>
-              <button type="button" class="btn btn-danger rounded-5" (click)="del(p.CategoryId)">
-                <i class="fa fa-trash"></i>
-              </button>
-            </td>
+            <td>{{ p.CategoryDescription }}</td>            
           </tr>
         </tbody>
       </table>

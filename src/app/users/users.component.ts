@@ -28,12 +28,9 @@ export class UsersComponent implements OnInit {
     this.obj.postregister().subscribe(res => {
       this.obj.getregister();
       alert("Inserted Successfully!!!")
-      //Swal.fire('Inserted Successfully','','success')
-      //this.router.navigate(['/user/userlogin'])
     },
     err => {
       alert("Not Inserted"+err)
-      //Swal.fire('Unsuccessful','','error')
     })
   }
 

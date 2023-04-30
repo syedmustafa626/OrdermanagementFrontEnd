@@ -17,17 +17,15 @@ export class CategoryComponent implements OnInit {
   
   del(CategoryId){
     if(
-      confirm('Cancel your Appointment ?')      
+      confirm('Delete your Category ?')      
       )
       {
       this.categoryService.delCategory(CategoryId).subscribe(res => {this.categoryService.getCategory();
-      alert("Appointment Deleted!!!")
-      //Swal.fire('Appointment Deleted','','success');    
+      alert("Category Deleted!!!")
       
     },
       err=>(
         alert('Errror!!!'+err)
-        //Swal.fire('Error!!! '+err,'','error')
         ));      
     }
   }
