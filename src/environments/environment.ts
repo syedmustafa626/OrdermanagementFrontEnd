@@ -4,8 +4,6 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:55277',
-  jwtKey: 'accessToken',
 };
 
 /*

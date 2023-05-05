@@ -1,8 +1,6 @@
 .form {
   width: 300px;
   transform: scale(1.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   background: transparent;
 }
 
@@ -12,7 +10,7 @@
   color: transparent;
 }
 ::placeholder {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .container {

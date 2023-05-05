@@ -8,6 +8,7 @@ import { Products } from '../models/products';
 export class ProductsService {
 
   readonly productsUrl = "http://localhost:55277/api/products";
+  readonly ppUrl = "http://localhost:55277/api/categories";
 
   constructor(public objcHttp:HttpClient) { }
 
@@ -16,6 +17,11 @@ export class ProductsService {
 
   getProducts() { 
     this.objcHttp.get(this.productsUrl).toPromise().then(res => this.productsList = res as Products[])
+    console.log(this.productsList);
+  }
+
+  getProductsById() { 
+    this.objcHttp.get(this.productsUrl + "/" +this.productsData.ProductId).toPromise().then(res => this.productsList = res as Products[])
   }
 
   postProducts() {

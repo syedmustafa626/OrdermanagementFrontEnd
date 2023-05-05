@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
+  local:any;
   ngOnInit(): void {
+    this.local=localStorage;
+  }
+
+  logOut(){
+    localStorage.clear();        
+    this.router.navigate(['/login'],{state:{status:{message:"Logout success!!",error:true}}}).then(()=>{
+      window.location.reload();
+    })
+    
   }
 
 }

@@ -3,17 +3,17 @@
 
 body{
     
-    background-image: url("/assets/home2.png");
+    background-image: url("https://www.jqueryscript.net/images/stripe-gradient-animation.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    /* font-family:'Courier New', Courier, monospace; */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
 form{
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);    
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);    
 }
 
 .green-icon{

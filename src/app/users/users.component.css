@@ -1,20 +1,28 @@
-form{
+.form {
     width: 700px;
-    color: rgb(32, 31, 31);
-}
-
-.container{
+    transform: scale(1.2);
+    background: transparent;
+  }
+  
+  .form-control {
+    background: #fe5e54;
+    background-color: transparent;
+    color: transparent;
+  }
+  ::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  
+  .container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.form-control{
-    background:transparent;
-    background-color: transparent;
-    color:transparent
-}
-::placeholder{
-    color: rgb(26, 24, 24);
-}
+    width: 50vw;
+  }
+  
+  button {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  

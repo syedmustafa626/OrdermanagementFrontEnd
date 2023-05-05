@@ -12,8 +12,9 @@ import { UsersComponent } from './users/users.component';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
-import { JWTService } from './services/jwt.service';
-import { AuthService } from './services/auth.service';
+import { JwtInterceptorInterceptor } from './services/jwt-interceptor.interceptor';
+import { FilterPipe } from './shared/filter.pipe';
+import { ProductfilterPipe } from './shared/productfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { AuthService } from './services/auth.service';
     NavbarComponent,
     OrdersComponent,
     ProductsComponent,
-    UsersComponent,    
+    UsersComponent,
+    FilterPipe,
+    ProductfilterPipe,    
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import { AuthService } from './services/auth.service';
     ReactiveFormsModule,
     JwtModule,    
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JWTService, multi: true },AuthService,],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:JwtInterceptorInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
