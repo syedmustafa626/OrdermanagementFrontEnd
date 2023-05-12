@@ -27,7 +27,7 @@ import { ProductfilterPipe } from './shared/productfilter.pipe';
     ProductsComponent,
     UsersComponent,
     FilterPipe,
-    ProductfilterPipe,    
+    ProductfilterPipe,
   ],
   imports: [
     BrowserModule,

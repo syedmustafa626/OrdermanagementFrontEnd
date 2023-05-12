@@ -17,7 +17,7 @@
           </thead>
           <tbody class="thead text-black" style="font-weight: 1">
             <tr *ngFor="let p of productsService.productsList">
-              <td>{{ p.ProductId }}</td> 
+              <td (click)="fillForm(p)">{{ p.ProductId }}</td> 
               <td>{{ p.ProductName}}</td>
               <td>{{ p.CategoryId}}</td>
               <td>{{ p.ProductPrice}}</td>
@@ -29,6 +29,43 @@
             </tr>
           </tbody>
         </table>
+
+
+        <form #form="ngForm" class="ps-3">
+          <input type="hidden" name="CartId" [value]="cartService.cartData.CartId">
+      <div class="row">
+          <div class="col mb-3">
+              <label for="UserId" class="form-label fs-5">UserId</label>
+              <input  name="UserId" type="UserId" class="form-control" id="UserId" #UserId="ngModel" [(ngModel)]="cartService.cartData.UserId"/>
+              <div class="form-text"></div>
+          </div>
+          <div class="col mb-3 ps-3">
+              
+              <label for="ProductId" class="form-label fs-5">ProductId</label>
+              <input value="{{productsService.productsData.ProductId}}" name="ProductId" class="form-control ps-3" id="ProductId"  #ProductId="ngModel" [(ngModel)]="cartService.cartData.ProductId" readonly>
+              <div class="form-text"></div>       
+          </div>
+          <div class="col mb-3 ps-3">
+              
+            <label for="Totalcost" class="form-label fs-5">Price</label>
+            <input  value="{{productsService.productsData.ProductPrice}}" name="Totalcost" type="Totalcost" class="form-control ps-3" id="Totalcost" #Totalcost="ngModel" [(ngModel)]="cartService.cartData.Totalcost"/>
+            <div class="form-text"></div>       
+        </div>
+      
+      </div>
+      
+      <div class="row">
+          <div class="col-4 offset-4">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary rounded-5" (click)="AddToCart(form)">
+                  <i class="fa fa-shopping-cart"></i> Add to Cart</button>
+            </div>
+        </div>
+        </div>
+        <div class="row"><br></div>
+      </form>
+
+
       </div>
     </div>
   </div>

@@ -19,10 +19,7 @@ export class CartComponent implements OnInit {
       confirm('Do you want to delete the Cart Item ?')      
       )
       {
-      this.cartService.delcart(CartId).subscribe(res => {this.cartService.getcart();
-      alert("Cart Item Deleted!!!")
-      
-    },
+      this.cartService.delcart(CartId).subscribe(res => {this.cartService.getcart();},
       err=>(
         alert('Errror!!!'+err)
         ));      
