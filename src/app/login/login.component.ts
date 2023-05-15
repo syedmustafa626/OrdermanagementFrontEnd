@@ -32,12 +32,8 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("token",result.JwtToken);
         if(result.JwtToken != null){         
           alert("Login Successful");
-        }
-
-        alert("Login is unsuccessful")
-                
-        this.router.navigate(['/category'])
-        
+          this.router.navigate(['/category'])
+        }                 
       })
     }
   }

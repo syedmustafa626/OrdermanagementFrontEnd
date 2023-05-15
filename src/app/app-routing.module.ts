@@ -4,11 +4,12 @@ import { LoginComponent } from './login/login.component';
 import { CategoryComponent } from './category/category.component';
 import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './products/products.component';
-import { CartComponent } from './cart/cart.component';
+import { CartComponent} from './cart/cart.component'
 import { OrdersComponent } from './orders/orders.component';
 import { AuthGuardGuard } from './services/auth-guard.guard';
 
 const routes: Routes = [
+  {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
   {path:'category',component:CategoryComponent,canActivate:[AuthGuardGuard]},
   {path:'users',component:UsersComponent},

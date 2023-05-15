@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +9,7 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent implements OnInit {
 
-  constructor(public cartService:CartService) { }
+  constructor(public cartService:CartService, private router:Router) { }
 
   ngOnInit(): void {
     this.cartService.getcart();
@@ -16,10 +17,12 @@ export class CartComponent implements OnInit {
   
   del(CartId){
     if(
-      confirm('Do you want to delete the Cart Item ?')      
+      confirm('Do you want to Confirm the Order?')      
       )
       {
-      this.cartService.delcart(CartId).subscribe(res => {this.cartService.getcart();},
+      this.cartService.delcart(CartId).subscribe(res => {this.cartService.getcart();
+        this.router.navigate(['/orders']);
+    },
       err=>(
         alert('Errror!!!'+err)
         ));      

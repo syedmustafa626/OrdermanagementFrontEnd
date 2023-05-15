@@ -20,7 +20,6 @@ export class OrdersComponent implements OnInit {
       )
       {
       this.ordersService.delorders(OrderId).subscribe(res => {this.ordersService.getorders();
-      alert("Order Deleted!!!")
       
     },
       err=>(

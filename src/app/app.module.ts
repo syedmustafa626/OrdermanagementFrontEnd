@@ -14,7 +14,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
 import { JwtInterceptorInterceptor } from './services/jwt-interceptor.interceptor';
 import { FilterPipe } from './shared/filter.pipe';
-import { ProductfilterPipe } from './shared/productfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { ProductfilterPipe } from './shared/productfilter.pipe';
     ProductsComponent,
     UsersComponent,
     FilterPipe,
-    ProductfilterPipe,
   ],
   imports: [
     BrowserModule,

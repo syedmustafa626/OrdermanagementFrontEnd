@@ -11,8 +11,8 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
 
-  // ProductId:string=localStorage.getItem("ProductId");
-  // ProductId1:number=1;
+  ProductId:string=localStorage.getItem("ProductId");
+  ProductId1:number=1;
 
   constructor(public productsService:ProductsService, public cartService:CartService, private router:Router) { }
 
