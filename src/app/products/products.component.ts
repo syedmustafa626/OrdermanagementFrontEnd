@@ -50,4 +50,8 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  navigate(){
+    this.router.navigate(['/addproducts'])
+  }
+
 }

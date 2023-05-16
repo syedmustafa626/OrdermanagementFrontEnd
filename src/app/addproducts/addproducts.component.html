@@ -1,0 +1,40 @@
+<body class="b1">
+    <div class="">
+      <div class="container">
+      <form #form="ngForm" autocomplete="off"  class="form bt1  p-3 mb-3 rounded-3 mat-card">
+        <input type="hidden" name="UserId" [value]="productsService.productsData.ProductId">
+        <div class="row g-0">
+          <div class="col text-center p-2 mb-3 rounded-3 text-black" style="background-color:#f868b0">
+            <span class="fs-3">Add Products</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="ProductName" type="text" class="form-control text-black" id="ProductName" #ProductName="ngModel" [(ngModel)]="productsService.productsData.ProductName" placeholder="ProductName"
+            minlength="3" maxlength="100" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="CategoryId" type="text" class="form-control text-black" id="CategoryId" #CategoryId="ngModel" [(ngModel)]="productsService.productsData.CategoryId" placeholder="CategoryId"
+            minlength="5" maxlength="10" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="ProductPrice" type="text" class="form-control text-black" id="ProductPrice" #ProductPrice="ngModel" [(ngModel)]="productsService.productsData.ProductPrice" placeholder="ProductPrice"
+            minlength="6" maxlength="10" required/>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col-4 offset-4">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary rounded-5" (click)="onSubmit(form)">Add +</button>
+            </div>
+        </div>
+        </div>  
+      </form>
+    </div>
+    </div>
+  </body>
+

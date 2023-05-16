@@ -34,7 +34,13 @@
             </tr>
           </tbody>
         </table>
-
+        <div class="row">
+          <div class="col-4 offset-4">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary rounded-5" (click)="navigate()">Add Products</button>
+            </div>
+        </div>
+        </div>  
 
         <form #form="ngForm" class="form bt1  p-3 mb-3 rounded-3 mat-card">
           <input type="hidden" name="CartId" [value]="cartService.cartData.CartId">
@@ -69,8 +75,6 @@
         </div>
         <div class="row"><br></div>
       </form>
-
-
       </div>
     </div>
   </div>

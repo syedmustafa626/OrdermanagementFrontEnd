@@ -27,10 +27,11 @@ export class UsersComponent implements OnInit {
   onSubmit(form:NgForm){
     this.obj.postregister().subscribe(res => {
       this.obj.getregister();
-      alert("Inserted Successfully!!!")
+      alert("You have Registered Successfully!!!");
+      this.router.navigate(['/login']);
     },
     err => {
-      alert("Not Inserted"+err)
+      alert("Email is already Registered")
     })
   }
 
